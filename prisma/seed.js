@@ -109,7 +109,7 @@ async function main() {
       jenisEvent: 'KEJURDA',
       tanggalMulai: new Date('2026-06-15'),
       tanggalSelesai: new Date('2026-06-18'),
-      lokasi: 'GOR Padjajaran, Kota Bandung',
+      lokasi: 'GOR Pangsuma, Kota Pontianak',
       deskripsi: 'Kejuaraan Daerah Baris-Berbaris Forum Baris Indonesia tingkat Provinsi Kalimantan Barat tahun 2026. Diikuti oleh seluruh pengurus cabang se-Kalimantan Barat. Kategori: Baris Wajib, Baris Kreasi, Baris Variasi, dan Colour Guard.',
       statusBuka: true,
       statusApproval: 'DISETUJUI',
@@ -118,51 +118,51 @@ async function main() {
   console.log('✅ Kejurda:', kejurda.namaKejurda);
 
   // ==================== 3. KEJURCAB (1 per tahun per pengcab, diajukan pengcab) ====================
-  const pcBandung = findPengcab('bandung');
-  const pcBekasi = findPengcab('bekasi');
-  const pcBogor = findPengcab('bogor');
+  const pcPontianak = findPengcab('pontianak');
+  const pcSingkawang = findPengcab('singkawang');
+  const pcSambas = findPengcab('sambas');
 
   const kejurcabData = [];
 
-  if (pcBandung) {
+  if (pcPontianak) {
     kejurcabData.push({
-      namaKejurda: `Kejurcab FORBASI ${pcBandung.kota} 2026`,
+      namaKejurda: `Kejurcab FORBASI ${pcPontianak.kota} 2026`,
       jenisEvent: 'KEJURCAB',
       tanggalMulai: new Date('2026-04-20'),
       tanggalSelesai: new Date('2026-04-22'),
-      lokasi: 'Lapangan Gasibu, Kota Bandung',
-      deskripsi: `Kejuaraan Cabang Baris-Berbaris FORBASI ${pcBandung.kota} tahun 2026. Seleksi atlet terbaik untuk mewakili ${pcBandung.kota} di Kejurda tingkat provinsi.`,
+      lokasi: 'Lapangan Akcaya, Kota Pontianak',
+      deskripsi: `Kejuaraan Cabang Baris-Berbaris FORBASI ${pcPontianak.kota} tahun 2026. Seleksi atlet terbaik untuk mewakili ${pcPontianak.kota} di Kejurda tingkat provinsi.`,
       statusBuka: true,
       statusApproval: 'DISETUJUI',
-      pengcabId: pcBandung.id,
+      pengcabId: pcPontianak.id,
     });
   }
 
-  if (pcBekasi) {
+  if (pcSingkawang) {
     kejurcabData.push({
-      namaKejurda: `Kejurcab FORBASI ${pcBekasi.kota} 2026`,
+      namaKejurda: `Kejurcab FORBASI ${pcSingkawang.kota} 2026`,
       jenisEvent: 'KEJURCAB',
       tanggalMulai: new Date('2026-05-10'),
       tanggalSelesai: new Date('2026-05-12'),
-      lokasi: 'Stadion Patriot Candrabhaga, Kota Bekasi',
-      deskripsi: `Kejuaraan Cabang Baris-Berbaris FORBASI ${pcBekasi.kota} tahun 2026. Seleksi atlet untuk perwakilan Bekasi di Kejurda Kalimantan Barat.`,
+      lokasi: 'Stadion Singkawang, Kota Singkawang',
+      deskripsi: `Kejuaraan Cabang Baris-Berbaris FORBASI ${pcSingkawang.kota} tahun 2026. Seleksi atlet untuk perwakilan Singkawang di Kejurda Kalimantan Barat.`,
       statusBuka: true,
       statusApproval: 'DISETUJUI',
-      pengcabId: pcBekasi.id,
+      pengcabId: pcSingkawang.id,
     });
   }
 
-  if (pcBogor) {
+  if (pcSambas) {
     kejurcabData.push({
-      namaKejurda: `Kejurcab FORBASI ${pcBogor.kota} 2026`,
+      namaKejurda: `Kejurcab FORBASI ${pcSambas.kota} 2026`,
       jenisEvent: 'KEJURCAB',
       tanggalMulai: new Date('2026-05-25'),
       tanggalSelesai: new Date('2026-05-26'),
-      lokasi: 'Lapangan Sempur, Kota Bogor',
-      deskripsi: `Kejuaraan Cabang Baris-Berbaris FORBASI ${pcBogor.kota} 2026. Seleksi atlet se-${pcBogor.kota}.`,
+      lokasi: 'Lapangan Merdeka, Kabupaten Sambas',
+      deskripsi: `Kejuaraan Cabang Baris-Berbaris FORBASI ${pcSambas.kota} 2026. Seleksi atlet se-${pcSambas.kota}.`,
       statusBuka: false,
       statusApproval: 'PENDING',
-      pengcabId: pcBogor.id,
+      pengcabId: pcSambas.id,
     });
   }
 
@@ -178,7 +178,7 @@ async function main() {
       jenisEvent: 'EVENT_REGULER',
       tanggalMulai: new Date('2026-08-17'),
       tanggalSelesai: new Date('2026-08-17'),
-      lokasi: 'Alun-Alun Kota Bandung',
+      lokasi: 'Alun-Alun Kota Pontianak',
       deskripsi: 'Lomba baris kreasi dalam rangka memperingati Hari Ulang Tahun Republik Indonesia ke-81. Terbuka untuk umum.',
       statusBuka: true,
       statusApproval: 'DISETUJUI',
@@ -188,38 +188,38 @@ async function main() {
       jenisEvent: 'EVENT_REGULER',
       tanggalMulai: new Date('2026-09-20'),
       tanggalSelesai: new Date('2026-09-21'),
-      lokasi: 'Lapangan Tegalega, Kota Bandung',
+      lokasi: 'Lapangan Akcaya, Kota Pontianak',
       deskripsi: 'Festival tahunan yang menggabungkan penampilan marching band dan baris-berbaris. Kategori: SD, SMP, SMA/SMK, dan Umum.',
       statusBuka: true,
       statusApproval: 'DISETUJUI',
     },
     {
-      namaKejurda: 'Kompetisi Baris-Berbaris Piala Bupati Garut 2026',
+      namaKejurda: 'Kompetisi Baris-Berbaris Piala Bupati Ketapang 2026',
       jenisEvent: 'EVENT_REGULER',
       tanggalMulai: new Date('2026-10-05'),
       tanggalSelesai: new Date('2026-10-06'),
-      lokasi: 'Alun-Alun Garut',
-      deskripsi: 'Kompetisi baris-berbaris memperebutkan Piala Bupati Garut. Terbuka untuk pelajar dan umum se-Kalimantan Barat.',
+      lokasi: 'Alun-Alun Ketapang',
+      deskripsi: 'Kompetisi baris-berbaris memperebutkan Piala Bupati Ketapang. Terbuka untuk pelajar dan umum se-Kalimantan Barat.',
       statusBuka: true,
       statusApproval: 'DISETUJUI',
     },
     {
-      namaKejurda: 'Open Tournament Baris Variasi Depok 2026',
+      namaKejurda: 'Open Tournament Baris Variasi Sanggau 2026',
       jenisEvent: 'EVENT_REGULER',
       tanggalMulai: new Date('2026-07-12'),
       tanggalSelesai: new Date('2026-07-13'),
-      lokasi: 'GOR Tri Lomba Juang, Depok',
-      deskripsi: 'Turnamen terbuka kategori baris variasi tingkat SMP dan SMA/SMK se-Jabodetabek.',
+      lokasi: 'GOR Sanggau',
+      deskripsi: 'Turnamen terbuka kategori baris variasi tingkat SMP dan SMA/SMK se-Kalimantan Barat.',
       statusBuka: true,
       statusApproval: 'DISETUJUI',
     },
     {
-      namaKejurda: 'Piala Walikota Cimahi - Lomba Baris-Berbaris 2026',
+      namaKejurda: 'Piala Walikota Singkawang - Lomba Baris-Berbaris 2026',
       jenisEvent: 'EVENT_REGULER',
       tanggalMulai: new Date('2026-11-15'),
       tanggalSelesai: new Date('2026-11-16'),
-      lokasi: 'Lapangan Brigif, Kota Cimahi',
-      deskripsi: 'Kompetisi baris-berbaris memperebutkan Piala Walikota Cimahi. Kategori Pelajar dan Umum.',
+      lokasi: 'Stadion Singkawang, Kota Singkawang',
+      deskripsi: 'Kompetisi baris-berbaris memperebutkan Piala Walikota Singkawang. Kategori Pelajar dan Umum.',
       statusBuka: false,
       statusApproval: 'DISETUJUI',
     },
@@ -237,8 +237,8 @@ async function main() {
   console.log('║  Gunakan akun FORBASI yang sudah terdaftar untuk login                   ║');
   console.log('║                                                                           ║');
   console.log('║  Contoh login:                                                            ║');
-  console.log('║  • admin_pengda_jawa_barat (password FORBASI) → SUPER ADMIN               ║');
-  console.log('║  • admin_pengcab_kota_bandung (password FORBASI) → PENGCAB                 ║');
+  console.log('║  • admin_pengda_kalimantan_barat (password FORBASI) → SUPER ADMIN         ║');
+  console.log('║  • admin_pengcab_kota_pontianak (password FORBASI) → PENGCAB              ║');
   console.log('║  • Akun member FORBASI lainnya → USER                                     ║');
   console.log('╚═══════════════════════════════════════════════════════════════════════════╝');
   console.log('\n📊 Data Summary:');

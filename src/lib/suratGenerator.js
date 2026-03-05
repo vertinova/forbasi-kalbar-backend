@@ -88,10 +88,10 @@ async function generateSuratRekomendasi(rekomendasiEvent) {
 
       // Address lines – green colored, right below title text
       doc.fontSize(7).font('Helvetica').fillColor(greenColor)
-        .text('Alamat : Jl. Farmakologi 01 Kel.Cigadung Kec.Cibeunying Kaler Kota Bandung, Kalimantan Barat',
+        .text('Alamat : Jl. Ahmad Yani No. 1, Kota Pontianak, Kalimantan Barat 78124',
           textLeft, kopTop + 57, { width: textW, align: 'left' });
       doc.fontSize(7).font('Helvetica').fillColor(greenColor)
-        .text('Email : forbasijawabarat@gmail.com, IG : forbasi.kalbar, Web : kalbar.forbasi.or.id',
+        .text('Email : forbasikalbar@gmail.com, IG : forbasi.kalbar, Web : kalbar.forbasi.or.id',
           textLeft, kopTop + 67, { width: textW, align: 'left' });
       doc.fontSize(7).font('Helvetica').fillColor(greenColor)
         .text('HP : +62 822-9557-6388 (call/wa), +62 851-1951-1898 (wa)',
@@ -221,7 +221,7 @@ async function generateSuratRekomendasi(rekomendasiEvent) {
 
       // Date right-aligned
       doc.fontSize(fs10).font('Helvetica')
-        .text(`Bandung, ${dateStr}`, marginL, y, { width: cw, align: 'right' });
+        .text(`Pontianak, ${dateStr}`, marginL, y, { width: cw, align: 'right' });
       y += 18;
 
       // Org name block (centered)
