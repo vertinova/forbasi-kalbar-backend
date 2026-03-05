@@ -55,10 +55,10 @@ function runDeploy(repo) {
   }
   deploying = true;
 
-  const scriptPath = '/var/www/kalbar/repos/backend/deploy.sh';
+  const scriptPath = '/var/www/kalbar/backend/deploy.sh';
   console.log(`\n🚀 Starting deploy for ${repo}...`);
 
-  execFile('bash', [scriptPath, repo], { cwd: '/var/www/kalbar/repos/backend', timeout: 300000 }, (err, stdout, stderr) => {
+  execFile('bash', [scriptPath, repo], { cwd: '/var/www/kalbar/backend', timeout: 300000 }, (err, stdout, stderr) => {
     deploying = false;
     if (err) {
       console.error('❌ Deploy failed:', err.message);
